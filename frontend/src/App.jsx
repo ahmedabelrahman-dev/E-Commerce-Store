@@ -1,5 +1,5 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
-
+// rebuilt the hall application frontend
 import HomePage from './pages/HomePage';
 import SignUpPage from './pages/SignUpPage';
 import LoginPage from './pages/LoginPage';
