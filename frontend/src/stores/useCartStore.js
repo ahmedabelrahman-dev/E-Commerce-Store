@@ -9,14 +9,14 @@ export const useCartStore = create((set, get) => ({
   subtotal: 0,
   isCouponApplied: false,
 
-  // getMyCoupon: async () => {
-  // 	try {
-  // 		const response = await axios.get("/coupons");
-  // 		set({ coupon: response.data });
-  // 	} catch (error) {
-  // 		console.error("Error fetching coupon:", error);
-  // 	}
-  // },
+  getMyCoupon: async () => {
+    try {
+      const response = await axios.get('/coupons');
+      set({ coupon: response.data });
+    } catch (error) {
+      console.error('Error fetching coupon:', error);
+    }
+  },
   applyCoupon: async (code) => {
     try {
       const response = await axios.post('/coupons/validate', { code });
