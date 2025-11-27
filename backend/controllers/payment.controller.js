@@ -24,7 +24,7 @@ export const createCheckoutSession = async (req, res) => {
           currency: 'usd',
           product_data: {
             name: product.name,
-            images: [imageUrl], // FIXED
+            images: [imageUrl],
           },
           unit_amount: amount,
         },
@@ -44,6 +44,7 @@ export const createCheckoutSession = async (req, res) => {
         userId: req.user._id,
         isActive: true,
       });
+
       if (coupon) {
         totalAmount -= Math.round(
           (totalAmount * coupon.discountPercentage) / 100
@@ -55,8 +56,11 @@ export const createCheckoutSession = async (req, res) => {
       payment_method_types: ['card'],
       line_items: lineItems,
       mode: 'payment',
+
+      // STRIPE v2025: still allowed
       success_url: `${process.env.CLIENT_URL}/purchase-success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${process.env.CLIENT_URL}/purchase-cancel`,
+
       discounts: coupon
         ? [
             {
@@ -64,6 +68,7 @@ export const createCheckoutSession = async (req, res) => {
             },
           ]
         : [],
+
       metadata: {
         userId: req.user._id.toString(),
         couponCode: couponCode || '',
@@ -77,15 +82,17 @@ export const createCheckoutSession = async (req, res) => {
       },
     });
 
-    if (totalAmount >= 20000) {
-      await createNewCoupon(req.user._id);
-    }
-    res.status(200).json({ id: session.id, totalAmount: totalAmount / 100 });
+    // ⭐ IMPORTANT CHANGE — RETURN session.url instead of session.id
+    return res.status(200).json({
+      url: session.url,
+      totalAmount: totalAmount / 100,
+    });
   } catch (error) {
     console.error('Error processing checkout:', error);
-    res
-      .status(500)
-      .json({ message: 'Error processing checkout', error: error.message });
+    res.status(500).json({
+      message: 'Error processing checkout',
+      error: error.message,
+    });
   }
 };
 
