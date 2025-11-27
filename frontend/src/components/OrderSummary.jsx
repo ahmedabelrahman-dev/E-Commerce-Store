@@ -16,21 +16,19 @@ const OrderSummary = () => {
   const formattedSubtotal = subtotal.toFixed(2);
   const formattedTotal = total.toFixed(2);
   const formattedSavings = savings.toFixed(2);
-
+  // fix Stripe v2025 no longer supports redirectToCheckout(),
+  // i change it window.location.href = res.data.url;
   const handlePayment = async () => {
-    const stripe = await stripePromise;
-    const res = await axios.post('/payments/create-checkout-session', {
-      products: cart,
-      couponCode: coupon ? coupon.code : null,
-    });
+    try {
+      const res = await axios.post('/payments/create-checkout-session', {
+        products: cart,
+        couponCode: coupon ? coupon.code : null,
+      });
 
-    const session = res.data;
-    const result = await stripe.redirectToCheckout({
-      sessionId: session.id,
-    });
-
-    if (result.error) {
-      console.error('Error:', result.error);
+      window.location.href = res.data.url;
+    } catch (error) {
+      console.error('Payment error:', error);
+      toast.error('Something went wrong. Please try again.');
     }
   };
 
