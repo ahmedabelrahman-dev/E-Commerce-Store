@@ -10,6 +10,8 @@ import LoginPage from './pages/LoginPage';
 import AdminPage from './pages/AdminPage';
 import CategoryPage from './pages/CategoryPage';
 import CartPage from './pages/CartPage';
+import PurchaseSuccessPage from './pages/PurchaseSuccessPage';
+import PurchaseCancelPage from './pages/PurchaseCancelPage';
 
 import { useUserStore } from './stores/useUserStore';
 import { useCartStore } from './stores/useCartStore';
@@ -22,11 +24,13 @@ function App() {
   useEffect(() => {
     checkAuth();
   }, [checkAuth]);
+
   useEffect(() => {
     if (!user) return;
 
     getCartItems();
   }, [getCartItems, user]);
+
   if (checkingAuth) return <LoadingSpinner />;
   return (
     <div className="min-h-screen bg-gray-900 text-white relative overflow-hidden">
@@ -59,6 +63,14 @@ function App() {
           <Route
             path="/cart"
             element={user ? <CartPage /> : <Navigate to="/login" />}
+          />
+          <Route
+            path="/purchase-success"
+            element={user ? <PurchaseSuccessPage /> : <Navigate to="/login" />}
+          />
+          <Route
+            path="/purchase-cancel"
+            element={user ? <PurchaseCancelPage /> : <Navigate to="/login" />}
           />
         </Routes>
       </div>
