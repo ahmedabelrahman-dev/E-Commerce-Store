@@ -23,7 +23,7 @@ The homepage features a clean, modern design with category browsing and featured
 
 Browse products filtered by specific categories with detailed product information.
 
-![featured product](e-commerc store images/featuredProduct.png)
+![featured product](frontend/public/featuredProduct.png)
 
 **Features:**
 
@@ -51,7 +51,7 @@ Manage your cart items, apply coupons, and proceed to checkout.
 
 Confirmation page after successful payment processing.
 
-![Purchase Success](e-commerc store images/purchaseSuccess.png)
+![Purchase Success](frontend/public/purchaseSuccess.png)
 
 **Information Displayed:**
 
@@ -64,7 +64,7 @@ Confirmation page after successful payment processing.
 
 Admin interface for managing products, including creation, editing, and deletion.
 
-![Admin Products](e-commerc store images/AdminProduct.png)
+![Admin Products](frontend/public/AdminProduct.png)
 
 **Features:**
 
@@ -78,7 +78,7 @@ Admin interface for managing products, including creation, editing, and deletion
 
 Comprehensive analytics dashboard showing sales performance and key metrics.
 
-![Admin Analytics](e-commerc store images/analytics.png)
+![Admin Analytics](frontend/public/analytics.png)
 
 **Key Metrics:**
 
