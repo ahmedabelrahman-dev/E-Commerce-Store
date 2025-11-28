@@ -4,6 +4,91 @@ A modern, full-stack e-commerce application built with React and Node.js, featur
 
 ![E-Commerce Store](frontend/public/screenshot-for-readme.png)
 
+## Screenshots
+
+### Homepage
+
+The homepage features a clean, modern design with category browsing and featured products.
+
+![Homepage](screenshots/homepage.png)
+
+**Key Features:**
+
+- Category grid with visual cards (Jeans, T-shirts, Shoes, Glasses, Jackets, Suits, Bags)
+- Featured products carousel showcasing highlighted items
+- Intuitive navigation with cart badge showing item count
+- Responsive design that works on all devices
+
+### Category Pages
+
+Browse products filtered by specific categories with detailed product information.
+
+![Category Page](screenshots/category-page.png)
+
+**Features:**
+
+- Product grid layout with images, names, and prices
+- "Add to Cart" functionality for each product
+- Seamless navigation between categories
+
+### Shopping Cart
+
+Manage your cart items, apply coupons, and proceed to checkout.
+
+![Shopping Cart](screenshots/cart-page.png)
+
+**Features:**
+
+- View all cart items with quantities
+- Adjust item quantities with +/- buttons
+- Remove items with trash icon
+- Apply discount coupons
+- View order summary with savings breakdown
+- "People also bought" recommendations
+- Direct checkout to Stripe payment
+
+### Purchase Success
+
+Confirmation page after successful payment processing.
+
+![Purchase Success](screenshots/checkout-success.png)
+
+**Information Displayed:**
+
+- Order confirmation with order number
+- Estimated delivery time
+- Thank you message
+- Options to continue shopping or view order details
+
+### Admin Dashboard - Products Management
+
+Admin interface for managing products, including creation, editing, and deletion.
+
+![Admin Products](screenshots/admin-dashboard-products.png)
+
+**Features:**
+
+- View all products in a table format
+- See product images, names, prices, and categories
+- Toggle featured status for products
+- Delete products from inventory
+- Create new products with image uploads
+
+### Admin Dashboard - Analytics
+
+Comprehensive analytics dashboard showing sales performance and key metrics.
+
+![Admin Analytics](screenshots/admin-dashboard-analytics.png)
+
+**Key Metrics:**
+
+- Total Users count
+- Total Products in inventory
+- Total Sales count
+- Total Revenue generated
+- Interactive charts showing revenue and sales trends over time
+- Date-range analytics visualization
+
 ## Features
 
 ### Customer Features
@@ -189,6 +274,9 @@ E-Commerce-Store/
 │   │   └── main.jsx
 │   ├── package.json
 │   └── vite.config.js
+│
+├── screenshots/          # Application screenshots for documentation
+│   └── README.md
 │
 └── package.json          # Root package.json
 ```
