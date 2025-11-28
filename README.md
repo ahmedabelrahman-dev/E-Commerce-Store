@@ -10,7 +10,7 @@ A modern, full-stack e-commerce application built with React and Node.js, featur
 
 The homepage features a clean, modern design with category browsing and featured products.
 
-![Homepage](screenshots/homepage.png)
+![Homepage](e-commerc store images/productCategory.png)
 
 **Key Features:**
 
@@ -23,7 +23,7 @@ The homepage features a clean, modern design with category browsing and featured
 
 Browse products filtered by specific categories with detailed product information.
 
-![Category Page](screenshots/category-page.png)
+![featured product](e-commerc store images/featuredProduct.png)
 
 **Features:**
 
@@ -35,7 +35,7 @@ Browse products filtered by specific categories with detailed product informatio
 
 Manage your cart items, apply coupons, and proceed to checkout.
 
-![Shopping Cart](screenshots/cart-page.png)
+![Shopping Cart](e-commerc store images/Cart.png)
 
 **Features:**
 
@@ -51,7 +51,7 @@ Manage your cart items, apply coupons, and proceed to checkout.
 
 Confirmation page after successful payment processing.
 
-![Purchase Success](screenshots/checkout-success.png)
+![Purchase Success](e-commerc store images/purchaseSuccess.png)
 
 **Information Displayed:**
 
@@ -64,7 +64,7 @@ Confirmation page after successful payment processing.
 
 Admin interface for managing products, including creation, editing, and deletion.
 
-![Admin Products](screenshots/admin-dashboard-products.png)
+![Admin Products](e-commerc store images/AdminProduct.png)
 
 **Features:**
 
@@ -78,7 +78,7 @@ Admin interface for managing products, including creation, editing, and deletion
 
 Comprehensive analytics dashboard showing sales performance and key metrics.
 
-![Admin Analytics](screenshots/admin-dashboard-analytics.png)
+![Admin Analytics](e-commerc store images/analytics.png)
 
 **Key Metrics:**
 
