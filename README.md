@@ -10,7 +10,7 @@ A modern, full-stack e-commerce application built with React and Node.js, featur
 
 The homepage features a clean, modern design with category browsing and featured products.
 
-![Homepage](e-commerc store images/productCategory.png)
+![Homepage](frontend/public/productCategory.png)
 
 **Key Features:**
 
